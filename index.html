@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #29b6f6;
+
+        color: #EEE;
+        padding-right: 320px;
+        padding-left: 320px;
+        line-height: 1.6;
+    }
+
+
+    .header-main {
+        padding: 0px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: black;   
+    }
+
+    .header-title {
+        text-align: center;
+        color: black;
+    }
+
+
+    .courses-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+        justify-content: center;
+    }
+
+
+    .header-title {
+        grid-column: 1 / -1; /* This makes the element span from the first column to the last one */
+    }
+
+
+    .course {
+        flex: 1 0 33.33%;
+        width: 420px;
+        min-height: 400px;
+        background-color: #e0fdff;
+        padding-top: 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: black;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transform-style: preserve-3d;
+        transition:all 0.5s ease;
+        transition-delay: 0s;
+        position:relative;
+    }
+
+    .course h2{
+        display: inline-block;
+    }
+
+    .course-container:hover .course {
+    transform: rotateY(180deg);
+    }
+    .course-container {
+        flex: 0 2 33.33%;  /* Taking the sizing from your original .course styling. */
+    }
+
+
+    .thefront{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .theback{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }
+
+    .course:hover{
+        transform:rotateY(180deg);
+    }
+
+    .course-container:hover .course {
+        transform:rotateY(180deg);
+    }
+
+
+
+    #bg-wrap {
+        position: fixed;    /* Keep it at the background */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;        /* Ensure it stays behind the content */
+    }
+
+
+    footer {
+        background-color: #e0fdff;
+        color:black;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    h1, h2 {
+        border-bottom: 2px solid #444;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    .course-link {
+        cursor: pointer;
+        text-decoration: none; /* This will remove the underline commonly associated with links. */
+        color: inherit; /* This will ensure the link takes the color of its parent or surrounding text. */
+        text-decoration: underline;
+    }
+
+    .course-link:hover {
+        text-decoration: underline; /* This will underline the link when hovering for added emphasis. */
+    }
+
+    .course hr {
+    width: 80%;  /* Adjust to desired width */
+    border: none;
+    border-top: 1px solid grey;  /* Change color as needed */
+    margin: 10px auto;  /* Centers the HR and provides spacing */
+    color: black;
+    }
+
+    
+    .label-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; /* Some spacing between the labels and the bars */
+}
+
+.label {
+  flex: 1;
+  text-align: center;
+}
+
+.animation-container {
+    display: flex;           /* Makes this a flex container */
+    justify-content: space-between; /* Evenly spaces each child element */
+    align-items: center;     /* Vertically centers child elements if needed */
+    width: 100%;             /* Ensures the container takes the full width */
+}
+
+
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback by [Your Name]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-main">
+        <h1>William Yang's UNSW course experience</h1>
+        <p>Welcome to my UNSW course review for computer science, I will be rating these courses based on
+            Enjoyability, Usefuleness and Difficulty.
+        </p>
+    </header>
+
+    
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+        </defs>
+        <!--<rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
+        <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
+        <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
+        <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
+        </rect>-->
+        <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+        <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        </svg>
+      </div>
+
+
+    <!-- Math Courses -->
+    <header class="header-title">
+        <h1>MATH COURSES</h1>   
+    </header>
+    <div class="courses-grid">
+        <div class="course-container">
+            <section class="course">
+                <div class="thefront">
+                    <h2><div class="rainbow"></div>MATH1131<div class="rainbow"></div></h2>
+                    <div class="label-container">
+                        <span class="label">Difficulty</span>
+                        <span class="label">Enjoyability</span>
+                        <span class="label">Usefulness</span>
+                      </div>
+                      <div class="animation-container">
+                        <div class="progress">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        -Very well put together
+                        <br>-Many resources to help (online)
+                        <br>-Final exam is doable for those who are prepared
+                        <br>-Absolutely useless for compsci majors
+                        <br>-Weekly quizzes and assignments are reasonable
+                        <br>-Tutorials and lectures are decent/slightly boring  
+                    </p>
+                </div>
+                <div class="theback">
+                    <p>
+                        <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1131/?year=2024" target="_blank" class="course-link">COURSE-LINK</a>
+                        <br>
+                        <br>Weekly Mobius quizzes - 10%
+                        <br>Assignment - 10% 
+                        <br>Lab test 1 - 15%
+                        <br>Lab test 2 - 15%
+                        <br>Final exam - 50%
+                    </p>
+                </div>
+            </section>
+    </div>
+
+
+    <div class="course-container">
+        <section class="course">
+            <div class="thefront">
+                <h2><div class="rainbow"></div>MATH1231<div class="rainbow"></div></h2>
+                <div class="label-container">
+                    <span class="label">Difficulty</span>
+                    <span class="label">Enjoyability</span>
+                    <span class="label">Usefulness</span>
+                  </div>
+                  <div class="animation-container">
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+
+                    </div>
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <hr>
+                    <p>
+                        -Very well put together
+                        <br>-Content is easier than Math1131
+                        <br>-Resources to help (online)
+                        <br>-Final exam is doable for those who are prepared
+                        <br>-Teaches vector and matrices which can be used in computer science
+                        <br>-Weekly quizzes and assignments are reasonable
+                        <br>-Tutorials and lectures are decent/slightly boring  
+                    </p>
+            </div>
+            <div class="theback">
+                <p>
+                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1231/" target="_blank" class="course-link">COURSE-LINK</a>
+                    <br>    
+                    <br>Weekly Mobius quizzes - 10%
+                        <br>Assignment - 10% 
+                        <br>Lab test 1 - 15%
+                        <br>Lab test 2 - 15%
+                        <br>Final exam - 50%
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="course-container">
+        <section class="course">
+            <div class="thefront">
+                <h2><div class="rainbow"></div>MATH1081<div class="rainbow"></div></h2>
+                <div class="label-container">
+                    <span class="label">Difficulty</span>
+                    <span class="label">Enjoyability</span>
+                    <span class="label">Usefulness</span>
+                  </div>
+                  <div class="animation-container">
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <hr>
+                    <p>
+                        -Course structure is solid
+                        <br>-Content is heavy and new (not like high school math)
+                        <br>-Resources to help (online)
+                        <br>-Final exam is slightly harder than math1a
+                        <br>-Teaches a wide range of concepts used in logical thinking
+                        <br>-Weekly quizzes and assignments are reasonable
+                        <br>-Tutorials and lectures are decent/slightly boring  
+                    </p>
+            </div>
+            <div class="theback">
+                <p>
+                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1081/" target="_blank" class="course-link">COURSE-LINK</a>
+                    <br>    
+                    <br>Weekly Mobius quizzes - 10%
+                        <br>Assignment - 15% 
+                        <br>Lab test 1 - 10%
+                        <br>Lab test 2 - 15%
+                        <br>Final exam - 50%
+                </p>
+            </div>
+        </section>
+    </div>
+        <!-- ... Add other Math courses as needed ... -->
+    </div>
+
+    <!-- Comp Courses -->
+    <header class="header-title">
+        <h1>COMP COURSES</h1>
+    </header>
+    <div class="courses-grid">
+        <div class="course-container">
+            <section class="course">
+                <div class="thefront">
+                    <h2><div class="stormy"></div>COMP1511<div class="stormy"></div></h2>
+                    <div class="label-container">
+                        <span class="label">Difficulty</span>
+                        <span class="label">Enjoyability</span>
+                        <span class="label">Usefulness</span>
+                      </div>
+                      <div class="animation-container">
+                        <div class="progress">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        -Course structed brilliantly
+                        <br>-Many resources to help (online and in person)
+                        <br>-Final exam is really easy apart from last few questions
+                        <br>-Teaches crucially important fundamentals for compsci
+                        <br>-Weekly labs are reasonable and fair
+                        <br>-Assignments are fun but take a lot of time
+                        <br>-Tutorials and lectures are extremely entertaining 
+                    </p>
+                </div>
+                <div class="theback">
+                    <p>
+                        <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP1511/?year=2024" target="_blank" class="course-link">COURSE-LINK</a>
+                        <br>
+                        <br>Weekly Labs - 15%
+                        <br>Assignment 1 - 20% 
+                        <br>Assignment 2  - 25%
+                        <br>Final exam - 40%
+                    </p>
+                </div>
+            </section>
+    </div>
+
+
+    <div class="course-container">
+        <section class="course">
+            <div class="thefront">
+                <h2><div class="stormy"></div>COMP1531<div class="stormy"></div></h2>
+                <div class="label-container">
+                    <span class="label">Difficulty</span>
+                    <span class="label">Enjoyability</span>
+                    <span class="label">Usefulness</span>
+                  </div>
+                  <div class="animation-container">
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                </div>
+                <hr>
+                    <p>
+                        -CURRENTLY BEING TAKEN
+                    </p>
+            </div>
+            <div class="theback">
+                <p>
+                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP1531/" target="_blank" class="course-link">COURSE-LINK</a>
+                        <br>    
+                    <br>CURRENTLY BEING TAKEN
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="course-container">
+        <section class="course">
+            <div class="thefront">
+                <h2><div class="stormy"></div>COMP2521<div class="stormy"></div></h2>
+                <div class="label-container">
+                    <span class="label">Difficulty</span>
+                    <span class="label">Enjoyability</span>
+                    <span class="label">Usefulness</span>
+                  </div>
+                  <div class="animation-container">
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                </div>
+                <hr>
+                    <p>
+                        -CURRENTLY BEING TAKEN
+                    </p>
+            </div>
+            <div class="theback">
+                <p>
+                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP2521/" target="_blank" class="course-link">COURSE-LINK</a>
+                    <br>
+                    <br>CURRENTLY BEING TAKEN
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Free Electives -->
+    <header class="header-title">
+        <h1>FREE ELECTIVES (INFS MINOR)</h1>
+    </header>
+    <div class="course-container">
+        <section class="course">
+            <div class="thefront">
+                <h2><div class="rainy"></div>INFS1603<div class="rainy"></div></h2>
+                <div class="label-container">
+                    <span class="label">Difficulty</span>
+                    <span class="label">Enjoyability</span>
+                    <span class="label">Usefulness</span>
+                  </div>
+                  <div class="animation-container">
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <hr>
+                    <p>
+                        -Course structed poorly
+                        <br>-Almost no resources available for help
+                        <br>-Final exam is brutal with limited time
+                        <br>-Teaches SQL and ERD which is useful for data jobs
+                        <br>-Weekly labs are tedious and useless but mandatory
+                        <br>-Assignments are a pain/extremely hard to score high
+                        <br>-Tutorials and lectures are extremely boring
+                        <br>-Bad group = bad grade
+                    </p>
+            </div>
+            <div class="theback">
+                <p>
+                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/INFS1603/" target="_blank" class="course-link">COURSE-LINK</a>
+                        <br>
+                        <br>Weekly quizzes - 10%
+                        <br>Assignment 1 - 10% 
+                        <br>Assignment 2  - 30%
+                        <br>Final exam - 50%
+                </p>
+            </div>
+        </section>
+
+
+        
+    </div>
+
+    <div class="course-container">
+        <section class="course">
+            <div class="thefront">
+                <h2><div class="rainy"></div>COMM1190<div class="rainy"></div></h2>
+                <div class="label-container">
+                    <span class="label">Difficulty</span>
+                    <span class="label">Enjoyability</span>
+                    <span class="label">Usefulness</span>
+                  </div>
+                  <div class="animation-container">
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                    <div class="progress">
+                        <div class="question-mark">?</div>
+                    </div>
+                </div>
+                <hr>
+                    <p>
+                        -CURRENTLY BEING TAKEN
+                    </p>
+            </div>
+            <div class="theback">
+                <p>
+                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMM1190/" target="_blank" class="course-link">COURSE-LINK</a>
+                        <br>    
+                    <br>CURRENTLY BEING TAKEN
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Thanks for visiting! Reach out for more details or if you want to discuss any courses.</p>
+    </footer>
+</body>
+
+
+
+<style>
+div.track, div.bar {
+    box-sizing: border-box;
+    position: relative;
+    
+}
+ 
+div.progress {
+    /* Remove position, top, and left properties */
+    width: 100px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top:3px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 3px #4e4e4e;
+    background-color: #1e1e1e;
+    display: inline-block; 
+    vertical-align: middle; 
+    margin-bottom:3px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+ 
+div.track {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    animation: prgBar 5s linear 0s forwards;
+    border-radius: 3px; 
+    z-index: 1;
+}
+ 
+div.bar {
+    height: 0px;
+    width: 6px;
+    background-color: #00ffff;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #00ffff;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 100px;
+    top: 100px;
+    float: left;
+    animation: barGrow 1s linear forwards;
+}
+
+.question-mark {
+    position: relative;
+    font-weight: bold;
+    font-size:22px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: -9px;
+    color:red;
+    text-shadow:
+        0 0 7px #ff0000,
+        0 0 10px #ff0000,
+        0 0 21px #ff0000,
+        0 0 42px #ff0000,
+        0 0 82px #ff0000,
+        0 0 92px #ff0000,
+        0 0 102px #ff0000,
+        0 0 151px #ff0000;
+}
+ 
+@keyframes prgBar {
+    0% { width: 0% }
+    15% { width: 15% }
+    30% { width: 30% }
+    45% { width: 45% }
+    60% { width: 60% }
+    75% { width: 75% }
+    90% { width: 90% }
+    100% { width: 100% }
+}
+
+/* New animation for bars */
+@keyframes barGrow {
+    0% { top: 100%; height: 0%; }
+    100% { top: 0%; height: 80%; }
+}
+
+div.bar:nth-child(1) { animation-delay: 0s; }
+div.bar:nth-child(2) { animation-delay: 1s; }
+div.bar:nth-child(3) { animation-delay: 2s; }
+div.bar:nth-child(4) { animation-delay: 3s; }
+div.bar:nth-child(5) { animation-delay: 4s; }
+div.bar:nth-child(6) { animation-delay: 5s; }
+div.bar:nth-child(7) { animation-delay: 6s; }
+div.bar:nth-child(8) { animation-delay: 7s; }
+div.bar:nth-child(9) { animation-delay: 8s; }
+div.bar:nth-child(10) { animation-delay: 9s; }
+
+    .rainy {
+    animation: rainy 5s ease-in-out infinite 1s;
+    background: #CCCCCC; 
+    border-radius: 55%;
+    box-shadow: 
+        #CCCCCC 32.5px -7.5px 0 -2.5px, 
+        #CCCCCC 12.5px -12.5px, 
+        #CCCCCC 15px 5px, 
+        #CCCCCC 30px 7.5px 0 -5px, 
+        #CCCCCC 42.5px 2.5px 0 -2.5px;
+    
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    
+}
+
+.rainy:after {
+    animation: rainy_shadow 5s ease-in-out infinite 1s;
+    background: #000000;
+    border-radius: 25%;
+    content: '';
+    height: 7.5px;
+    width: 60px;
+    opacity: 0.2;
+    position: absolute;
+    left: 2.5px; 
+    bottom: -30px;
+    transform: scale(1);
+}
+
+.rainy:before {
+    animation: rainy_rain .7s infinite linear;
+    content: '';
+    background: #CCCCCC;
+    border-radius: 25%;
+    display: block;
+    height: 3px;
+    width: 1.5px;
+    opacity: 0.3;
+    transform: scale(.9);
+}
+
+@keyframes rainy {
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rainy_shadow {
+    50% { transform: translateY(10px) scale(.7); opacity: 0.05; }
+}
+
+@keyframes rainy_rain {
+    0% {  
+        box-shadow: 
+            rgba(0,0,0,0) 15px 15px, 
+            rgba(0,0,0,0) 20px 20px,  
+            #000 25px 37.5px, 
+            #000 27.5px 25px, 
+            #000 35px 50px, 
+            #000 40px 47.5px, 
+            #000 55px 22.5px, 
+            #000 45px 17.5px; 
+    }
+    25% {  
+        box-shadow: 
+            #000 15px 22.5px,
+            #000 20px 30px,
+            #000 25px 45px,
+            #000 27.5px 32.5px,
+            rgba(0,0,0,0) 35px 60px,
+            rgba(0,0,0,0) 40px 60px,
+            #000 55px 35px,
+            #000 45px 30px;
+    }
+    26% {  
+        box-shadow:
+            #000 15px 22.5px,
+            #000 20px 30px,
+            #000 25px 45px,
+            #000 27.5px 32.5px,
+            rgba(0,0,0,0) 35px 20px,
+            rgba(0,0,0,0) 40px 10px,
+            #000 55px 35px,
+            #000 45px 30px; 
+    }
+    50% { 
+        box-shadow:
+            #000 15px 35px,
+            #000 20px 40px,
+            rgba(0,0,0,0) 25px 50px,
+            #000 27.5px 40px,
+            #000 35px 30px,
+            #000 40px 22.5px,
+            #000 55px 47.5px,
+            #000 45px 42.5px;
+    }
+    51% {
+        box-shadow:
+            #000 15px 35px,
+            #000 20px 40px,
+            rgba(0,0,0,0) 25px 22.5px,
+            #000 27.5px 40px,
+            #000 35px 30px,
+            #000 40px 22.5px,
+            #000 55px 47.5px,
+            #000 45px 42.5px;
+    }
+    75% {
+        box-shadow:
+            #000 15px 47.5px,
+            #000 20px 50px,
+            #000 25px 30px,
+            rgba(0,0,0,0) 27.5px 47.5px,
+            #000 35px 40px,
+            #000 40px 35px,
+            rgba(0,0,0,0) 55px 60px,
+            rgba(0,0,0,0) 45px 55px;
+    }
+    76% {
+        box-shadow:
+            #000 15px 47.5px,
+            #000 20px 50px,
+            #000 25px 30px,
+            rgba(0,0,0,0) 27.5px 17.5px,
+            #000 35px 40px,
+            #000 40px 35px,
+            rgba(0,0,0,0) 55px 12.5px,
+            rgba(0,0,0,0) 45px 7.5px;
+    }
+    100% {
+        box-shadow:
+            rgba(0,0,0,0) 15px 60px,
+            rgba(0,0,0,0) 20px 60px,
+            #000 25px 37.5px,
+            #000 27.5px 25px,
+            #000 35px 50px,
+            #000 40px 47.5px,
+            #000 55px 22.5px,
+            #000 45px 17.5px;
+    }
+    }
+
+    .starry {
+    animation: starry_star 5s ease-in-out infinite;
+    background: #fff;
+    border-radius: 50%;  
+    box-shadow:  
+        #FFFFFF 13px 3.5px 0 -0.5px, 
+        rgba(255,255,255,0.1) -18px -9.5px 0 -0.5px, 
+        rgba(255,255,255,0.1) -25.5px -17px 0 -0.5px,
+        #FFFFFF -26px -31px 0 -0.5px, 
+        #FFFFFF 7px -18.5px, 
+        rgba(255,255,255,0.1) 20.5px -9.5px,  
+        #FFFFFF 17px -25px,
+        rgba(255,255,255,0.1) 7px -35.5px 0 -0.5px,
+        #FFFFFF 32px -10.5px 0 -0.5px, 
+        rgba(255,255,255,0.1) 16px -42.5px 0 -0.5px,
+        #FFFFFF 32px -45px,
+        rgba(255,255,255,0.1) 30px -33.5px 0 -0.5px,  
+        #FFFFFF 17px -63.5px,
+        rgba(255,255,255,0.1) -13px -51.5px 0 -0.5px;
+    height: 2px;
+    width: 2px; 
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    margin-left: 25px;
+    transform: translateY(15px);
+    }
+
+    .starry:after { 
+        animation: starry 5s ease-in-out infinite;
+        border-radius: 50%;
+        box-shadow: #FFFFFF -12.5px 0;
+        content: '';
+        height: 50px;  
+        width: 50px;  
+        position: absolute;
+        top: -53px;   
+        transform: rotate(-5deg);
+        transform-origin: 0 50%;
+    }
+
+    @keyframes starry {
+        50% { transform: rotate(10deg); }
+    }
+
+    @keyframes starry_star {
+        50% { 
+            box-shadow:  
+                rgba(255,255,255,0.1) 13px 3.5px 0 -0.5px, 
+                #FFFFFF -18px -9.5px 0 -0.5px, 
+                #FFFFFF -25.5px -17px 0 -0.5px,
+                rgba(255,255,255,0.1) -26px -31px 0 -0.5px, 
+                rgba(255,255,255,0.1) 7px -18.5px,
+                #FFFFFF 20.5px -9.5px,   
+                rgba(255,255,255,0.1) 17px -25px,
+                #FFFFFF 7px -35.5px 0 -0.5px,
+                rgba(255,255,255,0.1) 32px -10.5px 0 -0.5px, 
+                #FFFFFF 16px -42.5px 0 -0.5px,
+                rgba(255,255,255,0.1) 32px -45px,
+                #FFFFFF 30px -33.5px 0 -0.5px,  
+                rgba(255,255,255,0.1) 17px -63.5px,
+                #FFFFFF -13px -51.5px 0 -0.5px;
+        }
+    }
+
+    .rainbow {
+        animation: rainbow 5s ease-in-out infinite;
+        border-radius: 85px 0 0 0; /* Half of 170px */
+        box-shadow: 
+            #FB323C -1px -1px 0 0.5px, /* Half of all values */
+            #F99716 -2px -2px 0 1.5px,
+            #FEE124 -3px -3px 0 2.5px,
+            #AFDF2E -4px -4px 0 3.5px,
+            #6AD7F8 -5px -5px 0 4.5px,
+            #60B1F5 -6px -6px 0 5.5px,
+            #A3459B -7px -7px 0 6.5px;
+        height: 35px; /* Half of 70px */
+        width: 35px;  /* Half of 70px */
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 30px;
+        margin-left: 30px;
+        transform: rotate(40deg);
+    }
+    .rainbow:after {
+        animation: rainbow_shadow 5s ease-in-out infinite;
+        background: #000000;
+        border-radius: 50%;
+        content: '';
+        opacity: 0.2;
+        height: 7.5px;
+        width: 60px; 
+        position: absolute;
+        bottom: 0px; 
+        left: 1.5px;    
+        transform: rotate(-40deg);
+        transform-origin: 50% 50%;
+    }
+    @keyframes rainbow {
+        50% { transform: rotate(50deg); }
+    }
+    @keyframes rainbow_shadow {
+        50% { transform:  rotate(-50deg) translate(5px) scale(.7); opacity: 0.05; }
+    }
+
+
+    .stormy {
+        animation: stormy 5s ease-in-out infinite;
+        background: #222222;
+        border-radius: 50%;
+        box-shadow: 
+            #222222 32.5px -7.5px 0 -2.5px, 
+            #222222 12.5px -12.5px, 
+            #222222 15px 5px, 
+            #222222 30px 7.5px 0 -5px, 
+            #222222 42.5px 2.5px 0 -2.5px;
+        height: 25px;  
+        width: 25px; 
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 60px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        left: 947px; 
+        top: 70px; 
+    }
+    .stormy:after {
+        animation: stormy_shadow 5s ease-in-out infinite;
+        background: #000;
+        border-radius: 50%;
+        content: '';
+        height: 7.5px; 
+        width: 60px; 
+        opacity: 0.2;
+        position: absolute;
+        left: 5px; 
+        bottom: -30px;
+        transform: scale(1);
+    }
+    .stormy:before {
+        animation: stormy_thunder 2s steps(1, end) infinite; 
+        border-left: 0px solid transparent;
+        border-right: 3.5px solid transparent;
+        border-top: 21.5px solid yellow; 
+        box-shadow: yellow -3.5px -16px;
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 30.25px;
+        top: 35px;
+        transform: rotate(7deg);
+        transform-origin: 50% -30px;
+    }
+    @keyframes stormy {
+        50% { transform: translateY(-10px); } 
+    }  
+    @keyframes stormy_shadow {
+        50% { transform: translateY(10px) scale(.7); opacity: 0.05; }
+    }
+    @keyframes stormy_thunder {
+        0%  { transform: rotate(10deg); opacity:1; }
+        5%  { transform: rotate(-17deg); opacity:1; }
+        10% { transform: rotate(0deg); opacity:1; }
+        15% { transform: rotate(-17deg); opacity:0; }
+    }
+
+</style>
