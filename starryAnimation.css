@@ -1,0 +1,66 @@
+
+.starry {
+    animation: starry_star 5s ease-in-out infinite;
+    background: #fff;
+    border-radius: 50%;  
+    box-shadow:  
+        #FFFFFF 13px 3.5px 0 -0.5px, 
+        rgba(255,255,255,0.1) -18px -9.5px 0 -0.5px, 
+        rgba(255,255,255,0.1) -25.5px -17px 0 -0.5px,
+        #FFFFFF -26px -31px 0 -0.5px, 
+        #FFFFFF 7px -18.5px, 
+        rgba(255,255,255,0.1) 20.5px -9.5px,  
+        #FFFFFF 17px -25px,
+        rgba(255,255,255,0.1) 7px -35.5px 0 -0.5px,
+        #FFFFFF 32px -10.5px 0 -0.5px, 
+        rgba(255,255,255,0.1) 16px -42.5px 0 -0.5px,
+        #FFFFFF 32px -45px,
+        rgba(255,255,255,0.1) 30px -33.5px 0 -0.5px,  
+        #FFFFFF 17px -63.5px,
+        rgba(255,255,255,0.1) -13px -51.5px 0 -0.5px;
+    height: 2px;
+    width: 2px; 
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    margin-left: 25px;
+    transform: translateY(15px);
+    }
+
+    .starry:after { 
+        animation: starry 5s ease-in-out infinite;
+        border-radius: 50%;
+        box-shadow: #FFFFFF -12.5px 0;
+        content: '';
+        height: 50px;  
+        width: 50px;  
+        position: absolute;
+        top: -53px;   
+        transform: rotate(-5deg);
+        transform-origin: 0 50%;
+    }
+
+    @keyframes starry {
+        50% { transform: rotate(10deg); }
+    }
+
+    @keyframes starry_star {
+        50% { 
+            box-shadow:  
+                rgba(255,255,255,0.1) 13px 3.5px 0 -0.5px, 
+                #FFFFFF -18px -9.5px 0 -0.5px, 
+                #FFFFFF -25.5px -17px 0 -0.5px,
+                rgba(255,255,255,0.1) -26px -31px 0 -0.5px, 
+                rgba(255,255,255,0.1) 7px -18.5px,
+                #FFFFFF 20.5px -9.5px,   
+                rgba(255,255,255,0.1) 17px -25px,
+                #FFFFFF 7px -35.5px 0 -0.5px,
+                rgba(255,255,255,0.1) 32px -10.5px 0 -0.5px, 
+                #FFFFFF 16px -42.5px 0 -0.5px,
+                rgba(255,255,255,0.1) 32px -45px,
+                #FFFFFF 30px -33.5px 0 -0.5px,  
+                rgba(255,255,255,0.1) 17px -63.5px,
+                #FFFFFF -13px -51.5px 0 -0.5px;
+        }
+    }
