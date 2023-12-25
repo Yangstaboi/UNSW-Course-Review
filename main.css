@@ -1,25 +1,32 @@
 
     body {
         font-family: Arial, sans-serif;
-        background-color: #29b6f6;
-
+        background-color: #000000;
+        padding-right: 5%; /* Adjust the percentage as necessary */
+        padding-left: 5%;
         color: #EEE;
-        padding-right: 320px;
-        padding-left: 320px;
         line-height: 1.6;
     }
 
+
+    @media screen and (max-width: 600px) {
+        body {
+            padding-right: 20px; /* Or any other smaller value */
+            padding-left: 20px;
+        }
+    }
+    
 
     .header-main {
         padding: 0px;
         text-align: center;
         margin-bottom: 30px;
-        color: black;   
+        color: rgb(255, 255, 255);   
     }
 
     .header-title {
         text-align: center;
-        color: black;
+        color: rgb(255, 255, 255);
     }
 
 
@@ -40,7 +47,7 @@
     .course {
         flex: 1 0 33.33%;
         width: 420px;
-        min-height: 400px;
+        min-height: 410px;
         background-color: #e0fdff;
         padding-top: 10px;
         border-radius: 10px;

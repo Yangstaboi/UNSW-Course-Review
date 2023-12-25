@@ -1,39 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="progressBar.css">
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="questionMark.css">
-<link rel="stylesheet" href="stormyAnimation.css">
-<link rel="stylesheet" href="rainbowAnimation.css">
-<link rel="stylesheet" href="rainyAnimation.css">
-<link rel="stylesheet" href="starryAnimation.css">
+  <link rel="stylesheet" href="progressBar.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="questionMark.css" />
+  <link rel="stylesheet" href="stormyAnimation.css" />
+  <link rel="stylesheet" href="rainbowAnimation.css" />
+  <link rel="stylesheet" href="rainyAnimation.css" />
+  <link rel="stylesheet" href="starryAnimation.css" />
 
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course Feedback by [Your Name]</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header-main">
-        <h1>William Yang's UNSW course experience</h1>
-        <p>Welcome to my UNSW course review for computer science, I will be rating these courses based on
-            Enjoyability, Usefuleness and Difficulty.
-        </p>
+      <h1>William Yang's UNSW course experience</h1>
+      <p>
+        Welcome to my UNSW course review for computer science, I will be rating
+        these courses based on Enjoyability, Usefuleness and Difficulty.
+      </p>
     </header>
 
-    
     <div id="bg-wrap">
-        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
         <defs>
-        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
-        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
-        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
-        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
-        <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
-        <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+          <radialGradient
+            id="Gradient1"
+            cx="50%"
+            cy="50%"
+            fx="0.441602%"
+            fy="50%"
+            r=".5"
+          >
+            <animate
+              attributeName="fx"
+              dur="34s"
+              values="0%;3%;0%"
+              repeatCount="indefinite"
+            ></animate>
+            <stop offset="0%" stop-color="rgba(0, 0, 0, 1)"></stop>
+            <stop offset="100%" stop-color="rgba(0, 0, 0, 0)"></stop>
+          </radialGradient>
+          <radialGradient
+            id="Gradient2"
+            cx="50%"
+            cy="50%"
+            fx="2.68147%"
+            fy="50%"
+            r=".5"
+          >
+            <animate
+              attributeName="fx"
+              dur="23.5s"
+              values="0%;3%;0%"
+              repeatCount="indefinite"
+            ></animate>
+            <stop offset="0%" stop-color="rgba(255, 0, 0, 1)"></stop>
+            <stop offset="100%" stop-color="rgba(255, 0, 0, 0)"></stop>
+          </radialGradient>
+          <radialGradient
+            id="Gradient3"
+            cx="50%"
+            cy="50%"
+            fx="0.836536%"
+            fy="50%"
+            r=".5"
+          >
+            <animate
+              attributeName="fx"
+              dur="21.5s"
+              values="0%;3%;0%"
+              repeatCount="indefinite"
+            ></animate>
+            <stop offset="0%" stop-color="rgba(255, 0, 0, 1)"></stop>
+            <stop offset="100%" stop-color="rgba(255, 0, 0, 0)"></stop>
+          </radialGradient>
+          <radialGradient
+            id="Gradient4"
+            cx="50%"
+            cy="50%"
+            fx="4.56417%"
+            fy="50%"
+            r=".5"
+          >
+            <animate
+              attributeName="fx"
+              dur="23s"
+              values="0%;5%;0%"
+              repeatCount="indefinite"
+            ></animate>
+            <stop offset="0%" stop-color="rgba(0, 0, 0, 1)"></stop>
+            <stop offset="100%" stop-color="rgba(0, 0, 0, 0)"></stop>
+          </radialGradient>
+          <radialGradient
+            id="Gradient5"
+            cx="50%"
+            cy="50%"
+            fx="2.65405%"
+            fy="50%"
+            r=".5"
+          >
+            <animate
+              attributeName="fx"
+              dur="24.5s"
+              values="0%;5%;0%"
+              repeatCount="indefinite"
+            ></animate>
+            <stop offset="0%" stop-color="rgba(0,0,0, 1)"></stop>
+            <stop offset="100%" stop-color="rgba(0,0,0, 0)"></stop>
+          </radialGradient>
+          <radialGradient
+            id="Gradient6"
+            cx="50%"
+            cy="50%"
+            fx="0.981338%"
+            fy="50%"
+            r=".5"
+          >
+            <animate
+              attributeName="fx"
+              dur="25.5s"
+              values="0%;5%;0%"
+              repeatCount="indefinite"
+            ></animate>
+            <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
+            <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
+          </radialGradient>
         </defs>
         <!--<rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
         <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
@@ -50,425 +145,626 @@
         <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
         <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
         </rect>-->
-        <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
-        <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+        <rect
+          x="13.744%"
+          y="1.18473%"
+          width="100%"
+          height="100%"
+          fill="url(#Gradient1)"
+          transform="rotate(334.41 50 50)"
+        >
+          <animate
+            attributeName="x"
+            dur="20s"
+            values="25%;0%;25%"
+            repeatCount="indefinite"
+          ></animate>
+          <animate
+            attributeName="y"
+            dur="21s"
+            values="0%;25%;0%"
+            repeatCount="indefinite"
+          ></animate>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 50 50"
+            to="360 50 50"
+            dur="7s"
+            repeatCount="indefinite"
+          ></animateTransform>
         </rect>
-        <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+        <rect
+          x="-2.17916%"
+          y="35.4267%"
+          width="100%"
+          height="100%"
+          fill="url(#Gradient2)"
+          transform="rotate(255.072 50 50)"
+        >
+          <animate
+            attributeName="x"
+            dur="23s"
+            values="-25%;0%;-25%"
+            repeatCount="indefinite"
+          ></animate>
+          <animate
+            attributeName="y"
+            dur="24s"
+            values="0%;50%;0%"
+            repeatCount="indefinite"
+          ></animate>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 50 50"
+            to="360 50 50"
+            dur="12s"
+            repeatCount="indefinite"
+          ></animateTransform>
         </rect>
-        </svg>
-      </div>
-
+        <rect
+          x="9.00483%"
+          y="14.5733%"
+          width="100%"
+          height="100%"
+          fill="url(#Gradient3)"
+          transform="rotate(139.903 50 50)"
+        >
+          <animate
+            attributeName="x"
+            dur="25s"
+            values="0%;25%;0%"
+            repeatCount="indefinite"
+          ></animate>
+          <animate
+            attributeName="y"
+            dur="12s"
+            values="0%;25%;0%"
+            repeatCount="indefinite"
+          ></animate>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="360 50 50"
+            to="0 50 50"
+            dur="9s"
+            repeatCount="indefinite"
+          ></animateTransform>
+        </rect>
+      </svg>
+    </div>
 
     <!-- Math Courses -->
     <header class="header-title">
-        <h1>MATH COURSES</h1>   
+      <h1>MATH COURSES</h1>
     </header>
     <div class="courses-grid">
-        <div class="course-container">
-            <section class="course">
-                <div class="thefront">
-                    <h2><div class="rainbow"></div>MATH1131<div class="rainbow"></div></h2>
-                    <div class="label-container">
-                        <span class="label">Difficulty</span>
-                        <span class="label">Enjoyability</span>
-                        <span class="label">Usefulness</span>
-                      </div>
-                      <div class="animation-container">
-                        <div class="progress">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="progress">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="progress">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                    </div>
-                    <hr>
-                    <p>
-                        -Very well put together
-                        <br>-Many resources to help (online)
-                        <br>-Final exam is doable for those who are prepared
-                        <br>-Absolutely useless for compsci majors
-                        <br>-Weekly quizzes and assignments are reasonable
-                        <br>-Tutorials and lectures are decent/slightly boring  
-                    </p>
-                </div>
-                <div class="theback">
-                    <p>
-                        <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1131/?year=2024" target="_blank" class="course-link">COURSE-LINK</a>
-                        <br>
-                        <br>Weekly Mobius quizzes - 10%
-                        <br>Assignment - 10% 
-                        <br>Lab test 1 - 15%
-                        <br>Lab test 2 - 15%
-                        <br>Final exam - 50%
-                    </p>
-                </div>
-            </section>
-    </div>
-
-
-    <div class="course-container">
+      <div class="course-container">
         <section class="course">
-            <div class="thefront">
-                <h2><div class="rainbow"></div>MATH1231<div class="rainbow"></div></h2>
-                <div class="label-container">
-                    <span class="label">Difficulty</span>
-                    <span class="label">Enjoyability</span>
-                    <span class="label">Usefulness</span>
-                  </div>
-                  <div class="animation-container">
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-
-                    </div>
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <hr>
-                    <p>
-                        -Very well put together
-                        <br>-Content is easier than Math1131
-                        <br>-Resources to help (online)
-                        <br>-Final exam is doable for those who are prepared
-                        <br>-Teaches vector and matrices which can be used in computer science
-                        <br>-Weekly quizzes and assignments are reasonable
-                        <br>-Tutorials and lectures are decent/slightly boring  
-                    </p>
+          <div class="thefront">
+            <h2>
+              <div class="rainbow"></div>
+              MATH1131
+              <div class="rainbow"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
             </div>
-            <div class="theback">
-                <p>
-                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1231/" target="_blank" class="course-link">COURSE-LINK</a>
-                    <br>    
-                    <br>Weekly Mobius quizzes - 10%
-                        <br>Assignment - 10% 
-                        <br>Lab test 1 - 15%
-                        <br>Lab test 2 - 15%
-                        <br>Final exam - 50%
-                </p>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
             </div>
+            <hr />
+            <p>
+              -Very well put together
+              <br />-Many resources to help (online) <br />-Final exam is doable
+              for those who are prepared <br />-Absolutely useless for compsci
+              majors <br />-Weekly quizzes and assignments are reasonable
+              <br />-Tutorials and lectures are decent/slightly boring
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1131/?year=2024"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />Weekly Mobius quizzes - 10% <br />Assignment - 10% <br />Lab
+              test 1 - 15% <br />Lab test 2 - 15% <br />Final exam - 50%
+            </p>
+          </div>
         </section>
-    </div>
+      </div>
 
-
-    <div class="course-container">
+      <div class="course-container">
         <section class="course">
-            <div class="thefront">
-                <h2><div class="rainbow"></div>MATH1081<div class="rainbow"></div></h2>
-                <div class="label-container">
-                    <span class="label">Difficulty</span>
-                    <span class="label">Enjoyability</span>
-                    <span class="label">Usefulness</span>
-                  </div>
-                  <div class="animation-container">
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <hr>
-                    <p>
-                        -Course structure is solid
-                        <br>-Content is heavy and new (not like high school math)
-                        <br>-Resources to help (online)
-                        <br>-Final exam is slightly harder than math1a
-                        <br>-Teaches a wide range of concepts used in logical thinking
-                        <br>-Weekly quizzes and assignments are reasonable
-                        <br>-Tutorials and lectures are decent/slightly boring  
-                    </p>
+          <div class="thefront">
+            <h2>
+              <div class="rainbow"></div>
+              MATH1231
+              <div class="rainbow"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
             </div>
-            <div class="theback">
-                <p>
-                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1081/" target="_blank" class="course-link">COURSE-LINK</a>
-                    <br>    
-                    <br>Weekly Mobius quizzes - 10%
-                        <br>Assignment - 15% 
-                        <br>Lab test 1 - 10%
-                        <br>Lab test 2 - 15%
-                        <br>Final exam - 50%
-                </p>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
             </div>
+            <hr />
+            <p>
+              -Very well put together
+              <br />-Content is easier than Math1131 <br />-Resources to help
+              (online) <br />-Final exam is doable for those who are prepared
+              <br />-Teaches vector and matrices which can be used in computer
+              science <br />-Weekly quizzes and assignments are reasonable
+              <br />-Tutorials and lectures are decent/slightly boring
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1231/"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />Weekly Mobius quizzes - 10% <br />Assignment - 10% <br />Lab
+              test 1 - 15% <br />Lab test 2 - 15% <br />Final exam - 50%
+            </p>
+          </div>
         </section>
-    </div>
-        <!-- ... Add other Math courses as needed ... -->
+      </div>
+
+      <div class="course-container">
+        <section class="course">
+          <div class="thefront">
+            <h2>
+              <div class="rainbow"></div>
+              MATH1081
+              <div class="rainbow"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
+            </div>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <hr />
+            <p>
+              -Course structure is solid
+              <br />-Content is heavy and new (not like high school math)
+              <br />-Resources to help (online) <br />-Final exam is slightly
+              harder than math1a <br />-Teaches a wide range of logical concepts
+              <br />-Weekly quizzes and assignments are reasonable
+              <br />-Tutorials and lectures are decent/slightly boring
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/MATH1081/"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />Weekly Mobius quizzes - 10% <br />Assignment - 15% <br />Lab
+              test 1 - 10% <br />Lab test 2 - 15% <br />Final exam - 50%
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- ... Add other Math courses as needed ... -->
     </div>
 
     <!-- Comp Courses -->
     <header class="header-title">
-        <h1>COMP COURSES</h1>
+      <h1>COMP COURSES</h1>
     </header>
     <div class="courses-grid">
-        <div class="course-container">
-            <section class="course">
-                <div class="thefront">
-                    <h2><div class="stormy"></div>COMP1511<div class="stormy"></div></h2>
-                    <div class="label-container">
-                        <span class="label">Difficulty</span>
-                        <span class="label">Enjoyability</span>
-                        <span class="label">Usefulness</span>
-                      </div>
-                      <div class="animation-container">
-                        <div class="progress">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="progress">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="progress">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                    </div>
-                    <hr>
-                    <p>
-                        -Course structed brilliantly
-                        <br>-Many resources to help (online and in person)
-                        <br>-Final exam is really easy apart from last few questions
-                        <br>-Teaches crucially important fundamentals for compsci
-                        <br>-Weekly labs are reasonable and fair
-                        <br>-Assignments are fun but take a lot of time
-                        <br>-Tutorials and lectures are extremely entertaining 
-                    </p>
-                </div>
-                <div class="theback">
-                    <p>
-                        <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP1511/?year=2024" target="_blank" class="course-link">COURSE-LINK</a>
-                        <br>
-                        <br>Weekly Labs - 15%
-                        <br>Assignment 1 - 20% 
-                        <br>Assignment 2  - 25%
-                        <br>Final exam - 40%
-                    </p>
-                </div>
-            </section>
-    </div>
-
-
-    <div class="course-container">
+      <div class="course-container">
         <section class="course">
-            <div class="thefront">
-                <h2><div class="stormy"></div>COMP1531<div class="stormy"></div></h2>
-                <div class="label-container">
-                    <span class="label">Difficulty</span>
-                    <span class="label">Enjoyability</span>
-                    <span class="label">Usefulness</span>
-                  </div>
-                  <div class="animation-container">
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                </div>
-                <hr>
-                    <p>
-                        -CURRENTLY BEING TAKEN
-                    </p>
+          <div class="thefront">
+            <h2>
+              <div class="stormy"></div>
+              COMP1511
+              <div class="stormy"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
             </div>
-            <div class="theback">
-                <p>
-                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP1531/" target="_blank" class="course-link">COURSE-LINK</a>
-                        <br>    
-                    <br>CURRENTLY BEING TAKEN
-                </p>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
             </div>
+            <hr />
+            <p>
+              -Course structed brilliantly
+              <br />-Many resources to help (online and in person) <br />-Final
+              exam is really easy apart from last few questions <br />-Teaches
+              crucially important fundamentals for compsci <br />-Weekly labs
+              are reasonable and fair <br />-Assignments are fun but take a lot
+              of time <br />-Tutorials and lectures are extremely entertaining
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP1511/?year=2024"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />Weekly Labs - 15% <br />Assignment 1 - 20% <br />Assignment
+              2 - 25% <br />Final exam - 40%
+            </p>
+          </div>
         </section>
-    </div>
+      </div>
 
-
-    <div class="course-container">
+      <div class="course-container">
         <section class="course">
-            <div class="thefront">
-                <h2><div class="stormy"></div>COMP2521<div class="stormy"></div></h2>
-                <div class="label-container">
-                    <span class="label">Difficulty</span>
-                    <span class="label">Enjoyability</span>
-                    <span class="label">Usefulness</span>
-                  </div>
-                  <div class="animation-container">
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                </div>
-                <hr>
-                    <p>
-                        -CURRENTLY BEING TAKEN
-                    </p>
+          <div class="thefront">
+            <h2>
+              <div class="stormy"></div>
+              COMP1531
+              <div class="stormy"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
             </div>
-            <div class="theback">
-                <p>
-                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP2521/" target="_blank" class="course-link">COURSE-LINK</a>
-                    <br>
-                    <br>CURRENTLY BEING TAKEN
-                </p>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
             </div>
+            <hr />
+            <p>
+              -Course structed brilliantly
+              <br />-Not as many resources to help online <br />-Final exam was
+              absolutely brutal for 23(T3) <br />-Teaches crucially important
+              fundamentals for software engineering such as working together and
+              using git <br />-Weekly labs are reasonable and fair
+              <br />-Assignments are group based. <br />-Tutorials and lectures
+              aren't hard at all, can self learn.
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP1531/"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />Weekly Labs - 10% <br />Group project - 60%<br />Final exam
+              - 30%
+            </p>
+          </div>
         </section>
-    </div>
+      </div>
+
+      <div class="course-container">
+        <section class="course">
+          <div class="thefront">
+            <h2>
+              <div class="stormy"></div>
+              COMP2521
+              <div class="stormy"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
+            </div>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <hr />
+            <p>
+              - -Course structed brilliantly <br />-Not as many resources to
+              help online <br />-Final exam was absolutely brutal for 23(T3)
+              <br />-Teaches crucially important fundamentals for software
+              engineering such as working together and using git <br />-Weekly
+              labs are reasonable and fair <br />-Assignments are group based.
+              <br />-Tutorials and lectures aren't hard at all, can self learn.
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMP2521/"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />Weekly Labs - 15% <br />Weekly quizzes - 10%<br />
+              Assignment 1 - 15% <br />Assignment 2 - 15% <br />Final exam - 45%
+            </p>
+          </div>
+        </section>
+      </div>
     </div>
 
     <!-- Free Electives -->
     <header class="header-title">
-        <h1>FREE ELECTIVES (INFS MINOR)</h1>
+      <h1>FREE ELECTIVES (INFS MINOR)</h1>
     </header>
     <div class="courses-grid">
-    <div class="course-container">
+      <div class="course-container">
         <section class="course">
-            <div class="thefront">
-                <h2><div class="rainy"></div>INFS1603<div class="rainy"></div></h2>
-                <div class="label-container">
-                    <span class="label">Difficulty</span>
-                    <span class="label">Enjoyability</span>
-                    <span class="label">Usefulness</span>
-                  </div>
-                  <div class="animation-container">
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="bar"></div>
-                    </div>
-                    <div class="progress">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <hr>
-                    <p>
-                        -Course structed poorly
-                        <br>-Almost no resources available for help
-                        <br>-Final exam is brutal with limited time
-                        <br>-Teaches SQL and ERD which is useful for data jobs
-                        <br>-Weekly labs are tedious and useless but mandatory
-                        <br>-Assignments are a pain/extremely hard to score high
-                        <br>-Tutorials and lectures are extremely boring
-                        <br>-Bad group = bad grade
-                    </p>
+          <div class="thefront">
+            <h2>
+              <div class="rainy"></div>
+              INFS1603
+              <div class="rainy"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
             </div>
-            <div class="theback">
-                <p>
-                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/INFS1603/" target="_blank" class="course-link">COURSE-LINK</a>
-                        <br>
-                        <br>Weekly quizzes - 10%
-                        <br>Assignment 1 - 10% 
-                        <br>Assignment 2  - 30%
-                        <br>Final exam - 50%
-                </p>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
             </div>
+            <hr />
+            <p>
+              -Course structed poorly
+              <br />-Almost no resources available for help <br />-Final exam is
+              brutal with limited time <br />-Teaches SQL and ERD which is
+              useful for data jobs <br />-Weekly labs are tedious and useless
+              but mandatory <br />-Assignments are a pain/extremely hard to
+              score high <br />-Tutorials and lectures are extremely boring
+              <br />-Bad group = bad grade
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/INFS1603/"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />Weekly quizzes - 10% <br />Assignment 1 - 10%
+              <br />Assignment 2 - 30% <br />Final exam - 50%
+            </p>
+          </div>
         </section>
+      </div>
 
-
-        
-    </div>
-
-    <div class="course-container">
+      <div class="course-container">
         <section class="course">
-            <div class="thefront">
-                <h2><div class="rainy"></div>COMM1190<div class="rainy"></div></h2>
-                <div class="label-container">
-                    <span class="label">Difficulty</span>
-                    <span class="label">Enjoyability</span>
-                    <span class="label">Usefulness</span>
-                  </div>
-                  <div class="animation-container">
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                    <div class="progress">
-                        <div class="question-mark">?</div>
-                    </div>
-                </div>
-                <hr>
-                    <p>
-                        -CURRENTLY BEING TAKEN
-                    </p>
+          <div class="thefront">
+            <h2>
+              <div class="rainy"></div>
+              COMM1190
+              <div class="rainy"></div>
+            </h2>
+            <div class="label-container">
+              <span class="label">Difficulty</span>
+              <span class="label">Enjoyability</span>
+              <span class="label">Usefulness</span>
             </div>
-            <div class="theback">
-                <p>
-                    <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMM1190/" target="_blank" class="course-link">COURSE-LINK</a>
-                        <br>    
-                    <br>CURRENTLY BEING TAKEN
-                </p>
+            <div class="animation-container">
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="progress">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
             </div>
+            <hr />
+            <p>
+              -Course structed decently <br />-Decent resources available for
+              help <br />-Final exam is brutal with limited time <br />-Teaches
+              data analytics which is useful for data jobs <br />-Weekly labs
+              arent necessary but are easy<br />-Assignments are decently hard
+              to score high<br />-Tutorials and lectures are just the labs and
+              lectures <br />-Bad group = You have to carry
+            </p>
+          </div>
+          <div class="theback">
+            <p>
+              <a
+                href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/COMM1190/"
+                target="_blank"
+                class="course-link"
+                >COURSE-LINK</a
+              >
+              <br />
+              <br />
+              Assignment 1 - 20% <br />Team Assignment 2 - 30% <br />Final exam
+              - 50%
+            </p>
+          </div>
         </section>
-    </div>
+      </div>
     </div>
 
     <footer>
-        <p>Thanks for visiting! Reach out for more details or if you want to discuss any courses.</p>
+      <p>
+        Thanks for visiting! Reach out for more details or if you want to
+        discuss any courses.
+      </p>
     </footer>
-</body>
+  </body>
+</html>
